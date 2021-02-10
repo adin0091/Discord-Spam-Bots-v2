@@ -4,7 +4,12 @@ const axios = require('axios').default;
 class Color {
     constructor() {
         this.red = '\u001b[31;1m';
+        this.green = '\u001b[32;1m';
         this.reset = '\u001b[37;1m';
+    };
+
+    design(color) {
+        return ` ${this[color]}[${this.reset}>${this[color]}] `;
     };
 };
 
@@ -15,8 +20,6 @@ class Bot extends Color {
         this.ids = [];
         this.valid = [];
         this.invalid = [];
-
-        this.design = ` ${this.red}[${this.reset}>${this.red}] `
     };
 
     push(bot) {
@@ -43,7 +46,7 @@ class Bot extends Color {
     };
 
     check() {
-        console.log(this.design + 'Checking Tokens...');
+        console.log(this.design('green') + 'Checking Tokens...');
 
         if (!this.tokens.length || !this.ids.length) throw new Error('No Tokens/Channels Found.');
         let x = 0;
@@ -71,8 +74,8 @@ class Bot extends Color {
         });
 
         setTimeout(() => {
-            console.log(this.design + `Invalid: ${y} | Valid: ${x}`);
-            console.log(this.design + 'Completed Checking Tokens.');
+            console.log(this.design('red') + `Invalid: ${y + this.reset} | ${this.green}Valid: ${x}`);
+            console.log(this.design('green') + 'Completed Checking Tokens.');
         }, 1000);
     };
 
@@ -91,9 +94,9 @@ class Bot extends Color {
                             'content': message
                         }
                     }).then(
-                        () => console.log(this.design + 'Sent Message.')
+                        () => console.log(this.design('green') + 'Sent Message.')
                     ).catch(
-                        () => console.log(this.design + 'Unable to Send a Message')
+                        () => console.log(this.design('red') + 'Unable to Send a Message')
                     );
                 }, delay);
             });
@@ -111,9 +114,9 @@ class Bot extends Color {
                         'Authorization': token
                     }
                 }).then(
-                    () => console.log(this.design + 'A Token Joined Successfully')
+                    () => console.log(this.design('green') + 'A Token Joined Successfully')
                 ).catch(
-                    () => console.log(this.design + 'Could Not Join The Server')
+                    () => console.log(this.design('red') + 'Could Not Join The Server')
                 )
             });
         };
