@@ -1,12 +1,22 @@
 const fs = require('fs');
 const axios = require('axios').default;
 
-class Bot {
+class Color {
     constructor() {
+        this.red = '\u001b[31;1m';
+        this.reset = '\u001b[37;1m';
+    };
+};
+
+class Bot extends Color {
+    constructor() {
+        super();
         this.tokens = [];
         this.ids = [];
         this.valid = [];
         this.invalid = [];
+
+        this.design = ` ${this.red}[${this.reset}>${this.red}] `
     };
 
     push(bot) {
@@ -33,7 +43,7 @@ class Bot {
     };
 
     check() {
-        console.log('Checking Tokens...');
+        console.log(this.design + 'Checking Tokens...');
 
         if (!this.tokens.length || !this.ids.length) throw new Error('No Tokens/Channels Found.');
         let x = 0;
@@ -61,16 +71,12 @@ class Bot {
         });
 
         setTimeout(() => {
-            console.log(`Invalid: ${y} | Valid: ${x}`);
-            console.log('Completed Checking Tokens.');
+            console.log(this.design + `Invalid: ${y} | Valid: ${x}`);
+            console.log(this.design + 'Completed Checking Tokens.');
         }, 1000);
     };
 
     spam(message, delay) {
-        setTimeout(() => {
-            console.clear();
-        }, 3000);
-
         this.tokens.forEach((token) => {
             this.ids.forEach((id) => {
                 setInterval(() => {
@@ -85,9 +91,9 @@ class Bot {
                             'content': message
                         }
                     }).then(
-                        () => console.log('Sent Message.')
+                        () => console.log(this.design + 'Sent Message.')
                     ).catch(
-                        () => console.log('Unable to Send a Message')
+                        () => console.log(this.design + 'Unable to Send a Message')
                     );
                 }, delay);
             });
@@ -105,9 +111,9 @@ class Bot {
                         'Authorization': token
                     }
                 }).then(
-                    () => console.log('A Token Joined Successfully')
+                    () => console.log(this.design + 'A Token Joined Successfully')
                 ).catch(
-                    () => console.log('Could Not Join The Server')
+                    () => console.log(this.design + 'Could Not Join The Server')
                 )
             });
         };
@@ -119,7 +125,10 @@ class Bot {
         this.push(bot);
         this.join(bot, invite);
         this.check();
-        this.spam(message, delay);
+
+        setTimeout(() => {
+            this.spam(message, delay);
+        }, 1000);
     };
 };
 
