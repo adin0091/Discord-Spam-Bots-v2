@@ -1,5 +1,5 @@
 # Discord-Spam-Bots-v2
-[![Build Status](https://travis-ci.com/endlessXD/Discord-Spam-Bots-v2.svg?token=TB29eorpapq4jCos93EN&branch=main)](https://travis-ci.com/endlessXD/Discord-Spam-Bots-v2) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.com/endlessXD/Discord-Spam-Bots-v2.svg?token=TB29eorpapq4jCos93EN&branch=main)](https://travis-ci.com/endlessXD/Discord-Spam-Bots-v2) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Best Letter](https://img.shields.io/badge/best%20letter-h-orange.svg)
 
 A recreation of my broken ones.
 # Information
