@@ -1,4 +1,6 @@
 # Discord-Spam-Bots-v2
+[![Build Status](https://travis-ci.com/endlessXD/Discord-Spam-Bots-v2.svg?token=TB29eorpapq4jCos93EN&branch=main)](https://travis-ci.com/endlessXD/Discord-Spam-Bots-v2)
+
 A recreation of my broken ones.
 # Information
 Put bot tokens in [tokens.txt](https://github.com/endlessXD/Discord-Spam-Bots-v2/blob/main/tokens.txt) and channel IDs in [channel-ids.txt](https://github.com/endlessXD/Discord-Spam-Bots-v2/blob/main/channel-ids.txt). Then, run [start.bat](https://github.com/endlessXD/Discord-Spam-Bots-v2/blob/main/start.bat).
