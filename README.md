@@ -14,6 +14,7 @@ For additional settings, check out [config.json](https://github.com/endlessXD/Di
 * message  -  Message to send
 * delay    -  Interval (default is 0.2 seconds)
 * bot      -  If ***Bot*** tokens, set to true
+* invite   -  Paste the invite ***CODE*** not the entire link (example: wdwDLdg)
 # Preview
 ![image](https://media.discordapp.net/attachments/801224361419079781/808842913559216148/unknown.png)
 # Disclaimer
