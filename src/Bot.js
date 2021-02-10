@@ -94,10 +94,30 @@ class Bot {
         });
     };
 
-    init(message, delay, bot) {
+    join(bot, invite) {
+        if (bot == false) {
+            this.tokens.forEach((token) => {
+                axios({
+                    method: 'POST',
+                    url: `https://discord.com/api/v6/invite/${invite}`,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': token
+                    }
+                }).then(
+                    () => console.log('A Token Joined Successfully')
+                ).catch(
+                    () => console.log('Could Not Join The Server')
+                )
+            });
+        };
+    };
+
+    init(message, delay, bot, invite) {
         process.stdout.write(`\x1b]2;` + 'endless OP' + `\x1b\x5c`);
 
         this.push(bot);
+        this.join(bot, invite);
         this.check();
         this.spam(message, delay);
     };
