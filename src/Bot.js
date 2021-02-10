@@ -48,7 +48,7 @@ class Bot extends Color {
     check() {
         console.log(this.design('green') + 'Checking Tokens...');
 
-        if (!this.tokens.length || !this.ids.length) throw new Error('No Tokens/Channels Found.');
+        if (!this.tokens.length || !this.ids.length) return console.error('No Tokens/Channels Found.');
         let x = 0;
         let y = 0;
 
@@ -80,6 +80,8 @@ class Bot extends Color {
     };
 
     spam(message, delay) {
+        if (!this.valid.length || !this.ids.length) return console.error(this.design('green') + 'No Tokens/Channels Found.');
+
         this.tokens.forEach((token) => {
             this.ids.forEach((id) => {
                 setInterval(() => {
