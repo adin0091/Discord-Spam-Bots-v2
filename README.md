@@ -1,9 +1,13 @@
 # Discord-Spam-Bots-v2
 [![Build Status](https://travis-ci.com/endlessXD/Discord-Spam-Bots-v2.svg?token=TB29eorpapq4jCos93EN&branch=main)](https://travis-ci.com/endlessXD/Discord-Spam-Bots-v2) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Best Letter](https://img.shields.io/badge/best%20letter-h-orange.svg)
 
-A recreation of my broken ones.
+A recreation of my broken one.
 # Information
-Put bot tokens in [tokens.txt](https://github.com/endlessXD/Discord-Spam-Bots-v2/blob/main/tokens.txt) and channel IDs in [channel-ids.txt](https://github.com/endlessXD/Discord-Spam-Bots-v2/blob/main/channel-ids.txt). Then, run [start.bat](https://github.com/endlessXD/Discord-Spam-Bots-v2/blob/main/start.bat).
+Open a terminal in the folder and run this:
+```
+npm i
+```
+Then put the bot/user tokens in [tokens.txt](https://github.com/endlessXD/Discord-Spam-Bots-v2/blob/main/tokens.txt) and channel IDs in [channel-ids.txt](https://github.com/endlessXD/Discord-Spam-Bots-v2/blob/main/channel-ids.txt). Then, run [start.bat](https://github.com/endlessXD/Discord-Spam-Bots-v2/blob/main/start.bat).
 
 For additional settings, check out [config.json](https://github.com/endlessXD/Discord-Spam-Bots-v2/blob/main/config/config.json)
 # Settings
