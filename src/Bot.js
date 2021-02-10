@@ -71,9 +71,9 @@ class Bot {
             console.clear();
         }, 3000);
 
-        setInterval(() => {
-            this.tokens.forEach((token) => {
-                this.ids.forEach((id) => {
+        this.tokens.forEach((token) => {
+            this.ids.forEach((id) => {
+                setInterval(() => {
                     axios({
                         method: 'POST',
                         url: `https://discord.com/api/v7/channels/${id}/messages`,
@@ -89,9 +89,9 @@ class Bot {
                     ).catch(
                         () => console.log('Unable to Send a Message')
                     );
-                });
+                }, delay);
             });
-        }, delay);
+        });
     };
 
     init(message, delay, bot) {
