@@ -125,7 +125,7 @@ class Bot extends Color {
     };
 
     init(message, delay, bot, invite) {
-        console.log(`\n        ________          \n        \\______ \\   ______\n         |    |  \\ /  ___/\n         |    \`   \\\\___ \\ \n        /_______  /____  >\n                \\/     \\/ \n    ===========================\n`);
+        console.log(this.red + `\n        ________          \n        \\______ \\   ______\n         |    |  \\ /  ___/\n         |    \`   \\\\___ \\ \n        /_______  /____  >\n                \\/     \\/ \n    ===========================\n`);
         process.stdout.write(`\x1b]2;` + 'endless OP' + `\x1b\x5c`);
 
         this.push(bot);
