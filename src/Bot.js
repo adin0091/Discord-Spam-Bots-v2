@@ -129,8 +129,8 @@ class Bot extends Color {
         process.stdout.write(`\x1b]2;` + 'endless OP' + `\x1b\x5c`);
 
         this.push(bot);
-        this.join(bot, invite);
         this.check();
+        this.join(bot, invite);
 
         setTimeout(() => {
             this.spam(message, delay);
